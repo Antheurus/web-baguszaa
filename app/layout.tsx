@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Miranha — Hong Kong Advertising Agency',
   description: 'Bagusaz Limited. Performance advertising & brand amplification from the heart of Hong Kong.',
   metadataBase: new URL('https://miranha.com'),
-  icons: { icon: '/favicon.svg' },
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.svg',          type: 'image/svg+xml' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+  },
   openGraph: {
     title: 'Miranha — Hong Kong Advertising Agency',
     description: 'Performance advertising & brand amplification from the heart of Hong Kong.',
