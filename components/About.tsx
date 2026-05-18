@@ -27,6 +27,33 @@ export default function About() {
                 </div>
               ))}
             </div>
+
+            <div className="partner-badges">
+              <div className="partner-badge">
+                <div className="partner-badge-icon partner-badge-icon--meta">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 11C2 7.4 4.1 5 7 5C8.8 5 10.2 6.2 11 7.8C11.8 6.2 13.2 5 15 5C17.9 5 20 7.4 20 11C20 14.6 17.9 17 15 17C13.2 17 11.8 15.8 11 14.2C10.2 15.8 8.8 17 7 17C4.1 17 2 14.6 2 11Z" fill="#0082FB"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="partner-badge-name">Meta</div>
+                  <div className="partner-badge-title">Business Partner</div>
+                </div>
+              </div>
+
+              <div className="partner-badge">
+                <div className="partner-badge-icon partner-badge-icon--tiktok">
+                  <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 4.4a4.4 4.4 0 01-3.4-3.9V0h-3.1v12.3a2.6 2.6 0 01-2.6 2.3 2.6 2.6 0 01-2.6-2.6 2.6 2.6 0 012.6-2.6c.25 0 .49.04.72.1V6.3a5.75 5.75 0 00-.72-.05A5.75 5.75 0 002.65 12a5.75 5.75 0 005.75 5.75A5.75 5.75 0 0014.15 12V6.3a7.4 7.4 0 004.35 1.4V4.55a4.4 4.4 0 01-1-.15z" fill="white"/>
+                    <path d="M17.5 4.4a4.4 4.4 0 01-3.4-3.9V0h-3.1v12.3a2.6 2.6 0 01-2.6 2.3 2.6 2.6 0 01-2.6-2.6 2.6 2.6 0 012.6-2.6c.25 0 .49.04.72.1V6.3a5.75 5.75 0 00-.72-.05A5.75 5.75 0 002.65 12a5.75 5.75 0 005.75 5.75A5.75 5.75 0 0014.15 12V6.3a7.4 7.4 0 004.35 1.4V4.55a4.4 4.4 0 01-1-.15z" fill="#69C9D0" opacity="0.5" style={{mixBlendMode: 'screen'}}/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="partner-badge-name">TikTok</div>
+                  <div className="partner-badge-title">Marketing Partner</div>
+                </div>
+              </div>
+            </div>
           </div>
         </RevealOnScroll>
 
