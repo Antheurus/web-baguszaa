@@ -24,23 +24,28 @@ const zh: Translations = {
       {
         name: '效果营销',
         desc: '跨付费搜索、社交媒体及程序化广告的数据驱动型营销活动，将广告投入转化为可量化的持续增长。',
+        tags: ['谷歌广告', 'Meta', 'TikTok', '程序化', '归因'],
       },
       {
         name: '创意制作',
         desc: '广告策划、文案创作、动态设计与全流程制作，突破香港视觉噪音，深入人心，令人难忘。',
+        tags: ['概念策划', '视频', '户外广告', '文案', '动态'],
       },
       {
         name: '数字战略',
         desc: '市场调研、受众图谱及渠道策略，专为大湾区消费市场的实际环境量身打造。',
+        tags: ['调研', '受众', '大湾区', '定位', '路线图'],
       },
       {
         name: '品牌扩张',
         desc: '公关、KOL合作及自然流量媒体，将品牌影响力延伸至付费广告触达范围之外。',
+        tags: ['公关', 'KOL', '自然流量', '活动', '合作'],
       },
     ],
   },
   stats: {
     labels: ['管理广告投放额', '品牌项目', '行业奖项', '深耕香港市场'],
+    yearsSuffix: '年',
   },
   portfolio: {
     label: '我们的案例',
@@ -103,13 +108,17 @@ const zh: Translations = {
     googleTitle: 'Google',
     googleBadge: 'Ads合作伙伴',
     awardsLabel: '行业\n奖项',
+    body1Lead: 'Mirahha 自创立起便抱持一个信念：',
     body1Strong: '香港值得拥有与其雄心相匹配的广告',
     body1Rest:
       '。太多国际代理商将千篇一律的方案空降至全球最成熟的消费市场之一，却对业绩的失望百思不得其解。',
+    body2Lead: '我们是',
     body2Strong: '香港本土代理商',
     body2Rest:
       '。我们深谙双语媒体生态、中环通勤族高度压缩的注意力窗口、铜锣湾的潮流引领力，以及大湾区的新兴消费吸引力。我们打造的每一个营销活动，都精准适配这一特定市场——并在客户需求延伸至全球时，随之向外输出。',
     bagusazLabel: 'Bagusaz Limited',
+    overlayAddressLine1: '香港中环士丹利街74–78号',
+    overlayAddressLine2: '香港特别行政区',
   },
   contact: {
     label: '联系我们',

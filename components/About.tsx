@@ -110,8 +110,8 @@ export default function About() {
               <div className="about-visual-text">
                 <div className="section-label" style={{ marginBottom: '0.5rem' }}>{a.bagusazLabel}</div>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-mid)', lineHeight: 1.7 }}>
-                  74–78 Stanley Street, Central<br />
-                  Hong Kong SAR
+                  {a.overlayAddressLine1}<br />
+                  {a.overlayAddressLine2}
                 </p>
               </div>
             </div>
@@ -130,10 +130,10 @@ export default function About() {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem 7rem' }}>
         <RevealOnScroll>
           <p className="about-body">
-            Mirahha was founded on a single conviction: that <strong>{a.body1Strong}</strong>{a.body1Rest}
+            {a.body1Lead}<strong>{a.body1Strong}</strong>{a.body1Rest}
           </p>
           <p className="about-body">
-            We are a <strong>{a.body2Strong}</strong>{a.body2Rest}
+            {a.body2Lead}<strong>{a.body2Strong}</strong>{a.body2Rest}
           </p>
         </RevealOnScroll>
       </div>

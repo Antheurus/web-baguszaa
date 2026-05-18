@@ -4,13 +4,6 @@
 import RevealOnScroll from './RevealOnScroll'
 import { useLanguage } from '@/lib/LanguageContext'
 
-const tagsByIndex = [
-  ['Google Ads', 'Meta', 'TikTok', 'Programmatic', 'Attribution'],
-  ['Concepting', 'Video', 'OOH', 'Copy', 'Motion'],
-  ['Research', 'Audience', 'GBA', 'Positioning', 'Roadmap'],
-  ['PR', 'KOL', 'Earned Media', 'Events', 'Partnerships'],
-]
-
 const nums = ['01', '02', '03', '04']
 
 export default function Services() {
@@ -35,7 +28,7 @@ export default function Services() {
               <div className="service-name">{s.name}</div>
               <p className="service-desc">{s.desc}</p>
               <div className="service-tags">
-                {tagsByIndex[i].map((tag) => (
+                {s.tags.map((tag) => (
                   <span key={tag} className="service-tag">{tag}</span>
                 ))}
               </div>

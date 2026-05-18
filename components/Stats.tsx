@@ -60,7 +60,7 @@ const statValues = [
   { value: 2.4,  prefix: 'HK$', suffix: 'B+', decimals: 1 },
   { value: 340,  prefix: '',    suffix: '+',  decimals: 0 },
   { value: 18,   prefix: '',    suffix: '',   decimals: 0 },
-  { value: 12,   prefix: '',    suffix: ' Yrs', decimals: 0 },
+  { value: 12,   prefix: '',    suffix: '',   decimals: 0 },
 ]
 
 export default function Stats() {
@@ -75,7 +75,7 @@ export default function Stats() {
               <Counter
                 target={s.value}
                 prefix={s.prefix}
-                suffix={s.suffix}
+                suffix={i === 3 ? t.stats.yearsSuffix : s.suffix}
                 decimals={s.decimals}
               />
             </div>

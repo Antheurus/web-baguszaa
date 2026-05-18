@@ -19,10 +19,11 @@ export type Translations = {
   services: {
     label: string
     title: string
-    items: Array<{ name: string; desc: string }>
+    items: Array<{ name: string; desc: string; tags: [string, string, string, string, string] }>
   }
   stats: {
     labels: [string, string, string, string]
+    yearsSuffix: string
   }
   portfolio: {
     label: string
@@ -54,11 +55,15 @@ export type Translations = {
     googleTitle: string
     googleBadge: string
     awardsLabel: string
+    body1Lead: string
     body1Strong: string
     body1Rest: string
+    body2Lead: string
     body2Strong: string
     body2Rest: string
     bagusazLabel: string
+    overlayAddressLine1: string
+    overlayAddressLine2: string
   }
   contact: {
     label: string
@@ -119,23 +124,28 @@ const en: Translations = {
       {
         name: 'Performance Marketing',
         desc: 'Data-driven campaigns across paid search, social, and programmatic that turn ad spend into measurable, compounding growth.',
+        tags: ['Google Ads', 'Meta', 'TikTok', 'Programmatic', 'Attribution'],
       },
       {
         name: 'Creative Production',
         desc: "Campaign concepts, copywriting, motion, and production that cut through Hong Kong's visual noise and lodge in memory.",
+        tags: ['Concepting', 'Video', 'OOH', 'Copy', 'Motion'],
       },
       {
         name: 'Digital Strategy',
         desc: 'Market research, audience mapping, and channel strategy built for the realities of the Greater Bay Area consumer landscape.',
+        tags: ['Research', 'Audience', 'GBA', 'Positioning', 'Roadmap'],
       },
       {
         name: 'Brand Amplification',
         desc: "PR, influencer partnerships, and earned media that scale a brand's footprint beyond what paid can reach alone.",
+        tags: ['PR', 'KOL', 'Earned Media', 'Events', 'Partnerships'],
       },
     ],
   },
   stats: {
     labels: ['Ad Spend Managed', 'Brands Launched', 'Industry Awards', 'In the HK Market'],
+    yearsSuffix: ' Yrs',
   },
   portfolio: {
     label: 'Our Work',
@@ -198,13 +208,17 @@ const en: Translations = {
     googleTitle: 'Google',
     googleBadge: 'Ads Partner',
     awardsLabel: 'Industry\nAwards',
+    body1Lead: 'Mirahha was founded on a single conviction: that ',
     body1Strong: 'Hong Kong deserves advertising that matches its ambition',
     body1Rest:
       ". Too often, international agencies parachute generic playbooks into one of the world's most sophisticated consumer markets and wonder why the numbers disappoint.",
+    body2Lead: 'We are a ',
     body2Strong: 'Hong Kong-native agency',
     body2Rest:
       '. We understand the bilingual media landscape, the compressed attention windows of Central commuters, the taste-making power of Causeway Bay, and the emerging pull of the Greater Bay Area. Every campaign we build is architected for this specific geography — then exported globally when the brief demands it.',
     bagusazLabel: 'Bagusaz Limited',
+    overlayAddressLine1: '74–78 Stanley Street, Central',
+    overlayAddressLine2: 'Hong Kong SAR',
   },
   contact: {
     label: 'Get In Touch',
