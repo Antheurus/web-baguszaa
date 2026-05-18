@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="hero-tag">Est. 2012 — Bagusaz Limited</div>
 
       <h1 className="hero-wordmark">
-        MIR<span>A</span>NHA
+        MIR<span>A</span>HHA
       </h1>
 
       <div className="hero-bottom">

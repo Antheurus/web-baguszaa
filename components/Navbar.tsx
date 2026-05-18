@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="/" className="nav-logo" aria-label="Mirahha — Home">
-          <svg viewBox="0 0 430 88" height="32" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', width: 'auto' }}>
+          <svg viewBox="0 0 560 88" height="32" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', width: 'auto' }}>
             <defs>
               <linearGradient id="nav-grad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#ff1f6e" />
