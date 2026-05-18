@@ -14,8 +14,8 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
-        <a href="/" className="nav-logo" aria-label="Miranha — Home">
-          <svg viewBox="0 0 380 88" height="32" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', width: 'auto' }}>
+        <a href="/" className="nav-logo" aria-label="Mirahha — Home">
+          <svg viewBox="0 0 430 88" height="32" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', width: 'auto' }}>
             <defs>
               <linearGradient id="nav-grad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#ff1f6e" />
@@ -34,7 +34,7 @@ export default function Navbar() {
               <circle cx="138" cy="70" r="5" fill="none" />
             </g>
             <text x="100" y="66" fontFamily="'Syne', sans-serif" fontSize="62" fontWeight="800" letterSpacing="-1">
-              <tspan fill="#ede9de">miranha</tspan><tspan fill="#ff1f6e">.</tspan>
+              <tspan fill="#ede9de">mirahha</tspan><tspan fill="#ff1f6e">.</tspan>
             </text>
           </svg>
         </a>

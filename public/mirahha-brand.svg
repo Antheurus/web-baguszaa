@@ -29,7 +29,7 @@
   <text x="400" y="320" font-family="'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#5a5870" text-anchor="middle" letter-spacing="3" font-weight="bold">TYPOGRAPHY</text>
   <g transform="translate(400, 430)">
     <text text-anchor="middle" font-family="'Montserrat', 'Segoe UI', sans-serif" font-size="72" font-weight="800" letter-spacing="-2">
-      <tspan fill="#ede9de">miranha</tspan><tspan fill="#ff1f6e">.</tspan>
+      <tspan fill="#ede9de">mirahha</tspan><tspan fill="#ff1f6e">.</tspan>
     </text>
     <text y="40" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#9896b0" letter-spacing="6">DATA-DRIVEN MARKETING</text>
   </g>
@@ -49,7 +49,7 @@
       <circle cx="138" cy="70" r="5" fill="#04040a"/>
     </g>
     <text x="110" y="68" font-family="'Montserrat', 'Segoe UI', sans-serif" font-size="64" font-weight="800" letter-spacing="-2">
-      <tspan fill="#ede9de">miranha</tspan><tspan fill="#ff1f6e">.</tspan>
+      <tspan fill="#ede9de">mirahha</tspan><tspan fill="#ff1f6e">.</tspan>
     </text>
   </g>
 </svg>

@@ -53,7 +53,7 @@ export const campaigns: Campaign[] = [
       'Media planning prioritised high-dwell environments: airport premium OOH, business class lounge digital screens, podcast pre-rolls for frequent business travellers. CTV ran 60-second cuts during streaming primetime in Hong Kong, London, and Sydney.',
       'The campaign launched at the exact midpoint of the northern hemisphere summer — July 11th — timed to catch the second booking wave for August and September travel. Performance extensions on search and social closed the loop with booking-intent audiences identified from prior brand exposure.',
     ],
-    pullQuote: 'Miranha didn\'t give us a campaign. They gave us a language — one we\'ve been speaking ever since.',
+    pullQuote: 'Mirahha didn\'t give us a campaign. They gave us a language — one we\'ve been speaking ever since.',
     pullQuoteAuthor: 'Head of Brand, Cathay Pacific',
     metrics: [
       { value: '+34%', label: 'Brand Recall Lift' },
@@ -233,7 +233,7 @@ export const campaigns: Campaign[] = [
       'The films were seeded to editorial media first: Tatler Asia, Esquire HK, and Time Out Hong Kong ran features on three of the eight collaborations the week before the campaign launched on owned channels. This editorial layer gave the subsequent social amplification cultural legitimacy.',
       'Creator posts ran in the week following the editorial coverage. The sequencing — earned editorial first, creator content second — meant the social content landed into an audience already primed to see K11 as culturally credible rather than commercially motivated. Total earned social reach across the eight-week campaign: 4.7 million.',
     ],
-    pullQuote: 'Other agencies want to tell our story. Miranha built the conditions for a story to actually happen.',
+    pullQuote: 'Other agencies want to tell our story. Mirahha built the conditions for a story to actually happen.',
     pullQuoteAuthor: 'Head of Brand Experience, K11 Musea',
     metrics: [
       { value: '4.7M', label: 'Earned Social Reach' },

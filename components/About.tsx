@@ -8,7 +8,7 @@ export default function About() {
       <div className="about-grid">
         <RevealOnScroll>
           <div>
-            <div className="section-label">About Miranha</div>
+            <div className="section-label">About Mirahha</div>
             <div className="about-display">
               Built for<br /><em>Hong Kong.</em><br />Wired for<br />the world.
             </div>
@@ -61,7 +61,7 @@ export default function About() {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem 7rem' }}>
         <RevealOnScroll>
           <p className="about-body">
-            Miranha was founded on a single conviction: that <strong>Hong Kong deserves advertising
+            Mirahha was founded on a single conviction: that <strong>Hong Kong deserves advertising
             that matches its ambition</strong>. Too often, international agencies parachute generic
             playbooks into one of the world&apos;s most sophisticated consumer markets and wonder why
             the numbers disappoint.

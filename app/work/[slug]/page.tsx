@@ -17,7 +17,7 @@ export async function generateMetadata(
   const c = campaigns.find((x) => x.slug === slug)
   if (!c) return {}
   return {
-    title: `${c.shortTitle} — ${c.client} | Miranha`,
+    title: `${c.shortTitle} — ${c.client} | Mirahha`,
     description: c.brief,
   }
 }

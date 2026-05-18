@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="divider" />
       <div className="footer">
-        <div className="footer-logo">MIRANHA</div>
+        <div className="footer-logo">MIRAHHA</div>
 
         <div className="footer-copy">
           &copy; {year} Bagusaz Limited. All rights reserved.<br />

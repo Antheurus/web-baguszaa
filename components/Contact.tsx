@@ -19,8 +19,8 @@ export default function Contact() {
 
             <div className="contact-info">
               {[
-                { label: 'New Business', val: <a href="mailto:hello@miranha.com">hello@miranha.com</a> },
-                { label: 'Careers',      val: <a href="mailto:work@miranha.com">work@miranha.com</a> },
+                { label: 'New Business', val: <a href="mailto:hello@mirahha.com">hello@mirahha.com</a> },
+                { label: 'Careers',      val: <a href="mailto:work@mirahha.com">work@mirahha.com</a> },
                 { label: 'HQ Address',   val: 'Flat 5, 4/F Won Hing Building, 74–78 Stanley Street, Central, Hong Kong' },
                 { label: 'Phone',        val: <a href="tel:+85221234567">+852 2123 4567</a> },
               ].map((item) => (
