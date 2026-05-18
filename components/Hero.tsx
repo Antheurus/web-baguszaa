@@ -1,6 +1,16 @@
 export default function Hero() {
   return (
     <section className="hero">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src="/hero-video-web.mp4" type="video/mp4" />
+      </video>
       <div className="hero-bg" />
 
       <div className="hero-coords">
