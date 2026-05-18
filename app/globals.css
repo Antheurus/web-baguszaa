@@ -650,9 +650,9 @@ img { display: block; max-width: 100%; }
 /* ─── Marquee ────────────────────────────────────────────────────────────── */
 .marquee-wrapper {
   overflow: hidden;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-2);
+  border-top: 1px solid #b8b6b0;
+  border-bottom: 1px solid #b8b6b0;
+  background: #d4d2cc;
   padding: 1.2rem 0;
   position: relative;
 }
@@ -667,8 +667,8 @@ img { display: block; max-width: 100%; }
   z-index: 2;
 }
 
-.marquee-wrapper::before { left: 0; background: linear-gradient(to right, var(--bg-2), transparent); }
-.marquee-wrapper::after  { right: 0; background: linear-gradient(to left, var(--bg-2), transparent); }
+.marquee-wrapper::before { left: 0; background: linear-gradient(to right, #d4d2cc, transparent); }
+.marquee-wrapper::after  { right: 0; background: linear-gradient(to left, #d4d2cc, transparent); }
 
 .marquee-track {
   display: flex;
@@ -680,14 +680,15 @@ img { display: block; max-width: 100%; }
 .marquee-item {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding: 0 2rem;
-  white-space: nowrap;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-dim);
+  gap: 2.5rem;
+  padding: 0 2.5rem;
+}
+
+.marquee-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8;
 }
 
 .marquee-dot {
@@ -952,6 +953,19 @@ img { display: block; max-width: 100%; }
 }
 
 .contact-info-val a:hover { color: var(--pink); transition: color 0.2s; }
+
+.contact-map {
+  border-top: 1px solid var(--border);
+  height: 420px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  filter: grayscale(0.25) contrast(1.05);
+}
 
 .contact-form {
   display: flex;

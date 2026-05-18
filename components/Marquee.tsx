@@ -1,16 +1,16 @@
 const items = [
-  { text: 'Cathay Pacific', highlight: true },
-  { text: 'MTR Corporation', highlight: false },
-  { text: 'HSBC Hong Kong', highlight: false },
-  { text: 'Lane Crawford', highlight: true },
-  { text: 'Octopus Cards', highlight: false },
-  { text: 'K11 Musea', highlight: false },
-  { text: 'BOC Hong Kong', highlight: true },
-  { text: 'Swire Properties', highlight: false },
-  { text: 'HK Tourism Board', highlight: false },
-  { text: 'DFS Group', highlight: true },
-  { text: 'AIA Hong Kong', highlight: false },
-  { text: 'Mandarin Oriental', highlight: false },
+  { src: '/logo-cathay80-en.originalimage.svg', alt: 'Cathay Pacific' },
+  { src: '/logo-mtr-corp.svg', alt: 'MTR Corporation' },
+  { src: '/HSBC-logo.svg', alt: 'HSBC Hong Kong' },
+  { src: '/LC-Home_logo.png', alt: 'Lane Crawford' },
+  { src: '/octopus-logo.png', alt: 'Octopus Cards' },
+  { src: '/k11-musea-logo.svg', alt: 'K11 Musea' },
+  { src: '/logo-2388.HK_BOC.svg', alt: 'BOC Hong Kong' },
+  { src: '/swire-properties-logo.png', alt: 'Swire Properties' },
+  { src: '/logo-hongkong-tourism-board-en1.webp', alt: 'HK Tourism Board' },
+  { src: '/DFS_Group_logo.png', alt: 'DFS Group' },
+  { src: '/logo-aia-hongkong.png', alt: 'AIA Hong Kong' },
+  { src: '/mandarin-oriental-logo.png', alt: 'Mandarin Oriental' },
 ]
 
 export default function Marquee() {
@@ -21,9 +21,8 @@ export default function Marquee() {
       <div className="marquee-track">
         {doubled.map((item, i) => (
           <div key={i} className="marquee-item">
-            <span className={item.highlight ? 'marquee-highlight' : ''}>
-              {item.text}
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={item.src} alt={item.alt} className="marquee-logo" />
             <span className="marquee-dot" />
           </div>
         ))}

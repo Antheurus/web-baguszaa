@@ -42,6 +42,15 @@ export default function Contact() {
           <ContactForm />
         </RevealOnScroll>
       </div>
+
+      <div className="contact-map">
+        <iframe
+          src="https://maps.google.com/maps?q=22.2835252,114.1545226&z=17&output=embed&hl=en"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Mirahha Agency HK"
+        />
+      </div>
     </section>
   )
 }
