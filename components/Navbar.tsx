@@ -45,9 +45,20 @@ export default function Navbar() {
           <li><a href="#work">{t.nav.work}</a></li>
           <li><a href="#about">{t.nav.about}</a></li>
           <li>
-            <button className="nav-lang" onClick={toggleLang} aria-label="Toggle language">
-              {lang === 'en' ? '中文' : 'EN'}
-            </button>
+            <div className="lang-toggle" role="group" aria-label="Language">
+              <button
+                className={`lang-opt${lang === 'en' ? ' active' : ''}`}
+                onClick={() => lang !== 'en' && toggleLang()}
+              >
+                EN
+              </button>
+              <button
+                className={`lang-opt${lang === 'zh' ? ' active' : ''}`}
+                onClick={() => lang !== 'zh' && toggleLang()}
+              >
+                中文
+              </button>
+            </div>
           </li>
           <li><a href="#contact" className="nav-cta">{t.nav.cta}</a></li>
         </ul>

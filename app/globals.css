@@ -118,20 +118,37 @@ img { display: block; max-width: 100%; }
   color: var(--bg) !important;
 }
 
-.nav-lang {
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-opt {
   background: none;
   border: none;
   cursor: pointer;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-mid);
-  transition: color 0.2s;
-  padding: 0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
 }
 
-.nav-lang:hover { color: var(--text); }
+.lang-opt.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+}
+
+.lang-opt:not(.active):hover { color: var(--text); }
 
 /* ─── Hero ───────────────────────────────────────────────────────────────── */
 .hero {
