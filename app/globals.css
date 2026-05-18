@@ -118,6 +118,21 @@ img { display: block; max-width: 100%; }
   color: var(--bg) !important;
 }
 
+.nav-lang {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.nav-lang:hover { color: var(--text); }
+
 /* ─── Hero ───────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -752,7 +767,8 @@ img { display: block; max-width: 100%; }
 .partner-badge:hover { border-color: var(--text-dim); }
 
 .partner-badge-icon--meta,
-.partner-badge-icon--tiktok {
+.partner-badge-icon--tiktok,
+.partner-badge-icon--google {
   width: 36px;
   height: 36px;
   border-radius: 8px;
@@ -764,6 +780,7 @@ img { display: block; max-width: 100%; }
 
 .partner-badge-icon--meta   { background: rgba(0,130,251,0.12); width: auto; padding: 0 0.6rem; }
 .partner-badge-icon--tiktok { background: #010101; }
+.partner-badge-icon--google { background: #fff; }
 
 .partner-badge-name {
   font-size: 0.6rem;

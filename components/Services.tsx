@@ -1,52 +1,42 @@
-import RevealOnScroll from './RevealOnScroll'
+// components/Services.tsx
+'use client'
 
-const services = [
-  {
-    num: '01',
-    name: 'Performance Marketing',
-    desc: 'Data-driven campaigns across paid search, social, and programmatic that turn ad spend into measurable, compounding growth.',
-    tags: ['Google Ads', 'Meta', 'TikTok', 'Programmatic', 'Attribution'],
-  },
-  {
-    num: '02',
-    name: 'Creative Production',
-    desc: 'Campaign concepts, copywriting, motion, and production that cut through Hong Kong\'s visual noise and lodge in memory.',
-    tags: ['Concepting', 'Video', 'OOH', 'Copy', 'Motion'],
-  },
-  {
-    num: '03',
-    name: 'Digital Strategy',
-    desc: 'Market research, audience mapping, and channel strategy built for the realities of the Greater Bay Area consumer landscape.',
-    tags: ['Research', 'Audience', 'GBA', 'Positioning', 'Roadmap'],
-  },
-  {
-    num: '04',
-    name: 'Brand Amplification',
-    desc: 'PR, influencer partnerships, and earned media that scale a brand\'s footprint beyond what paid can reach alone.',
-    tags: ['PR', 'KOL', 'Earned Media', 'Events', 'Partnerships'],
-  },
+import RevealOnScroll from './RevealOnScroll'
+import { useLanguage } from '@/lib/LanguageContext'
+
+const tagsByIndex = [
+  ['Google Ads', 'Meta', 'TikTok', 'Programmatic', 'Attribution'],
+  ['Concepting', 'Video', 'OOH', 'Copy', 'Motion'],
+  ['Research', 'Audience', 'GBA', 'Positioning', 'Roadmap'],
+  ['PR', 'KOL', 'Earned Media', 'Events', 'Partnerships'],
 ]
 
+const nums = ['01', '02', '03', '04']
+
 export default function Services() {
+  const { t } = useLanguage()
+
   return (
     <section className="section" id="services">
       <RevealOnScroll>
-        <div className="section-label">What We Do</div>
+        <div className="section-label">{t.services.label}</div>
         <h2 className="section-title">
-          Full-spectrum<br />advertising capability
+          {t.services.title.split('\n').map((line, i) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
         </h2>
       </RevealOnScroll>
 
       <div className="services-grid">
-        {services.map((s, i) => (
-          <RevealOnScroll key={s.num} delay={i * 80}>
+        {t.services.items.map((s, i) => (
+          <RevealOnScroll key={nums[i]} delay={i * 80}>
             <div className="service-card">
-              <div className="service-number">{s.num}</div>
+              <div className="service-number">{nums[i]}</div>
               <div className="service-name">{s.name}</div>
               <p className="service-desc">{s.desc}</p>
               <div className="service-tags">
-                {s.tags.map((t) => (
-                  <span key={t} className="service-tag">{t}</span>
+                {tagsByIndex[i].map((tag) => (
+                  <span key={tag} className="service-tag">{tag}</span>
                 ))}
               </div>
             </div>

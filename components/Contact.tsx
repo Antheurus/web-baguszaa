@@ -1,29 +1,34 @@
+// components/Contact.tsx
+'use client'
+
 import RevealOnScroll from './RevealOnScroll'
 import ContactForm from './ContactForm'
+import { useLanguage } from '@/lib/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
+  const c = t.contact
+
+  const infoItems = [
+    { label: c.newBusiness, val: <a href="mailto:hello@mirahha.com">hello@mirahha.com</a> },
+    { label: c.careers,     val: <a href="mailto:work@mirahha.com">work@mirahha.com</a> },
+    { label: c.hqAddress,   val: 'Flat 5, 4/F Won Hing Building, 74–78 Stanley Street, Central, Hong Kong' },
+    { label: c.phone,       val: <a href="tel:+85221234567">+852 2123 4567</a> },
+  ]
+
   return (
     <section id="contact" className="contact-wrapper">
       <div className="contact-inner">
         <RevealOnScroll>
           <div>
-            <div className="section-label">Get In Touch</div>
+            <div className="section-label">{c.label}</div>
             <h2 className="contact-heading">
-              Let&apos;s build<br />something<br /><span className="line-pink">that lands.</span>
+              {c.headingLines[0]}<br />{c.headingLines[1]}<br /><span className="line-pink">{c.headingLines[2]}</span>
             </h2>
-            <p className="contact-sub">
-              Tell us about your brand, your market, and your goal.
-              We&apos;ll get back within one business day with a frank view
-              of what&apos;s possible.
-            </p>
+            <p className="contact-sub">{c.sub}</p>
 
             <div className="contact-info">
-              {[
-                { label: 'New Business', val: <a href="mailto:hello@mirahha.com">hello@mirahha.com</a> },
-                { label: 'Careers',      val: <a href="mailto:work@mirahha.com">work@mirahha.com</a> },
-                { label: 'HQ Address',   val: 'Flat 5, 4/F Won Hing Building, 74–78 Stanley Street, Central, Hong Kong' },
-                { label: 'Phone',        val: <a href="tel:+85221234567">+852 2123 4567</a> },
-              ].map((item) => (
+              {infoItems.map((item) => (
                 <div key={item.label} className="contact-info-item">
                   <span className="contact-info-label">{item.label}</span>
                   <span className="contact-info-val">{item.val}</span>

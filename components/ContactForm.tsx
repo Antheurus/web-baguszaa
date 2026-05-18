@@ -1,6 +1,12 @@
+// components/ContactForm.tsx
 'use client'
 
+import { useLanguage } from '@/lib/LanguageContext'
+
 export default function ContactForm() {
+  const { t } = useLanguage()
+  const f = t.form
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
   }
@@ -9,43 +15,43 @@ export default function ContactForm() {
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-row">
         <div className="form-field">
-          <label className="form-label" htmlFor="contact-name">Name</label>
-          <input id="contact-name" className="form-input" type="text" placeholder="Your name" />
+          <label className="form-label" htmlFor="contact-name">{f.name}</label>
+          <input id="contact-name" className="form-input" type="text" placeholder={f.namePlaceholder} />
         </div>
         <div className="form-field">
-          <label className="form-label" htmlFor="contact-company">Company</label>
-          <input id="contact-company" className="form-input" type="text" placeholder="Company name" />
+          <label className="form-label" htmlFor="contact-company">{f.company}</label>
+          <input id="contact-company" className="form-input" type="text" placeholder={f.companyPlaceholder} />
         </div>
       </div>
 
       <div className="form-field">
-        <label className="form-label" htmlFor="contact-email">Email</label>
-        <input id="contact-email" className="form-input" type="email" placeholder="you@company.com" />
+        <label className="form-label" htmlFor="contact-email">{f.email}</label>
+        <input id="contact-email" className="form-input" type="email" placeholder={f.emailPlaceholder} />
       </div>
 
       <div className="form-field">
-        <label className="form-label" htmlFor="contact-service">Service Interest</label>
+        <label className="form-label" htmlFor="contact-service">{f.service}</label>
         <select id="contact-service" className="form-select">
-          <option value="">Select a service</option>
-          <option value="performance">Performance Marketing</option>
-          <option value="creative">Creative Production</option>
-          <option value="strategy">Digital Strategy</option>
-          <option value="brand">Brand Amplification</option>
-          <option value="full">Full-Service Partnership</option>
+          <option value="">{f.serviceDefault}</option>
+          <option value="performance">{f.performance}</option>
+          <option value="creative">{f.creative}</option>
+          <option value="strategy">{f.strategy}</option>
+          <option value="brand">{f.brand}</option>
+          <option value="full">{f.full}</option>
         </select>
       </div>
 
       <div className="form-field">
-        <label className="form-label" htmlFor="contact-brief">Brief</label>
+        <label className="form-label" htmlFor="contact-brief">{f.brief}</label>
         <textarea
           id="contact-brief"
           className="form-textarea"
-          placeholder="Tell us about your brand and what you're trying to achieve..."
+          placeholder={f.briefPlaceholder}
         />
       </div>
 
       <button type="submit" className="form-submit">
-        Send Brief
+        {f.submit}
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

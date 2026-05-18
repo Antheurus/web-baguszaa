@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useLanguage } from '@/lib/LanguageContext'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const { lang, t, toggleLang } = useLanguage()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -39,10 +41,15 @@ export default function Navbar() {
           </svg>
         </a>
         <ul className="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact" className="nav-cta">Get Started</a></li>
+          <li><a href="#services">{t.nav.services}</a></li>
+          <li><a href="#work">{t.nav.work}</a></li>
+          <li><a href="#about">{t.nav.about}</a></li>
+          <li>
+            <button className="nav-lang" onClick={toggleLang} aria-label="Toggle language">
+              {lang === 'en' ? '中文' : 'EN'}
+            </button>
+          </li>
+          <li><a href="#contact" className="nav-cta">{t.nav.cta}</a></li>
         </ul>
       </div>
     </nav>

@@ -1,4 +1,11 @@
+// components/Hero.tsx
+'use client'
+
+import { useLanguage } from '@/lib/LanguageContext'
+
 export default function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section className="hero">
       <video
@@ -13,11 +20,9 @@ export default function Hero() {
       </video>
       <div className="hero-bg" />
 
-      <div className="hero-coords">
-        22.3193° N, 114.1694° E — Hong Kong SAR
-      </div>
+      <div className="hero-coords">{t.hero.coords}</div>
 
-      <div className="hero-tag">Est. 2012 — Bagusaz Limited</div>
+      <div className="hero-tag">{t.hero.tag}</div>
 
       <h1 className="hero-wordmark">
         mirahha<span>.</span>
@@ -25,26 +30,24 @@ export default function Hero() {
 
       <div className="hero-bottom">
         <p className="hero-tagline">
-          <strong>Amplify your signal</strong> in Asia's most competitive
-          market. Performance advertising and brand creation from the
-          heart of Hong Kong.
+          <strong>{t.hero.taglineStrong}</strong>{t.hero.taglineRest}
         </p>
 
         <div className="hero-actions">
           <a href="#contact" className="btn-primary">
-            Start a Campaign
+            {t.hero.ctaPrimary}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
           <a href="#work" className="btn-outline">
-            View Our Work
+            {t.hero.ctaOutline}
           </a>
         </div>
       </div>
 
       <div className="hero-scroll">
-        <span>Scroll</span>
+        <span>{t.hero.scroll}</span>
         <div className="scroll-line" />
       </div>
     </section>

@@ -1,6 +1,8 @@
+// components/Stats.tsx
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useLanguage } from '@/lib/LanguageContext'
 
 interface CounterProps {
   target: number
@@ -54,19 +56,21 @@ function Counter({ target, prefix = '', suffix = '', decimals = 0 }: CounterProp
   return <span ref={spanRef}>{prefix}{display}{suffix}</span>
 }
 
-const stats = [
-  { value: 2.4,  prefix: 'HK$', suffix: 'B+', decimals: 1, label: 'Ad Spend Managed' },
-  { value: 340,  prefix: '',    suffix: '+',  decimals: 0, label: 'Brands Launched' },
-  { value: 18,   prefix: '',    suffix: '',   decimals: 0, label: 'Industry Awards' },
-  { value: 12,   prefix: '',    suffix: ' Yrs', decimals: 0, label: 'In the HK Market' },
+const statValues = [
+  { value: 2.4,  prefix: 'HK$', suffix: 'B+', decimals: 1 },
+  { value: 340,  prefix: '',    suffix: '+',  decimals: 0 },
+  { value: 18,   prefix: '',    suffix: '',   decimals: 0 },
+  { value: 12,   prefix: '',    suffix: ' Yrs', decimals: 0 },
 ]
 
 export default function Stats() {
+  const { t } = useLanguage()
+
   return (
     <div className="stats-wrapper">
       <div className="stats-grid">
-        {stats.map((s) => (
-          <div key={s.label} className="stat-item">
+        {statValues.map((s, i) => (
+          <div key={t.stats.labels[i]} className="stat-item">
             <div className="stat-value">
               <Counter
                 target={s.value}
@@ -75,7 +79,7 @@ export default function Stats() {
                 decimals={s.decimals}
               />
             </div>
-            <div className="stat-label">{s.label}</div>
+            <div className="stat-label">{t.stats.labels[i]}</div>
           </div>
         ))}
       </div>

@@ -1,26 +1,35 @@
+// components/About.tsx
+'use client'
+
 import Image from 'next/image'
 import RevealOnScroll from './RevealOnScroll'
+import { useLanguage } from '@/lib/LanguageContext'
 
 export default function About() {
+  const { t } = useLanguage()
+  const a = t.about
+
+  const detailRows = [
+    { key: a.detailKeys.founded,     val: a.detailVals.founded     },
+    { key: a.detailKeys.legalEntity, val: a.detailVals.legalEntity },
+    { key: a.detailKeys.address,     val: a.detailVals.address     },
+    { key: a.detailKeys.markets,     val: a.detailVals.markets     },
+    { key: a.detailKeys.team,        val: a.detailVals.team        },
+  ]
+
   return (
     <section id="about">
       <div className="divider" />
       <div className="about-grid">
         <RevealOnScroll>
           <div>
-            <div className="section-label">About Mirahha</div>
+            <div className="section-label">{a.label}</div>
             <div className="about-display">
-              Built for<br /><em>Hong Kong.</em><br />Wired for<br />the world.
+              {a.displayLines[0]}<br /><em>{a.displayLines[1]}</em><br />{a.displayLines[2]}<br />{a.displayLines[3]}
             </div>
 
             <div className="about-details">
-              {[
-                { key: 'Founded',      val: '2012, Central, Hong Kong' },
-                { key: 'Legal Entity', val: 'Bagusaz Limited' },
-                { key: 'Address',      val: 'Flat 5, 4/F Won Hing Building, 74–78 Stanley Street, Central' },
-                { key: 'Markets',      val: 'HK · GBA · SEA · APAC' },
-                { key: 'Team',         val: '80+ Specialists' },
-              ].map((r) => (
+              {detailRows.map((r) => (
                 <div key={r.key} className="about-detail-row">
                   <span className="about-detail-key">{r.key}</span>
                   <span className="about-detail-val">{r.val}</span>
@@ -50,8 +59,8 @@ export default function About() {
                   </svg>
                 </div>
                 <div>
-                  <div className="partner-badge-name">Meta</div>
-                  <div className="partner-badge-title">Business Partner</div>
+                  <div className="partner-badge-name">{a.metaTitle}</div>
+                  <div className="partner-badge-title">{a.metaBadge}</div>
                 </div>
               </div>
 
@@ -63,8 +72,8 @@ export default function About() {
                   </svg>
                 </div>
                 <div>
-                  <div className="partner-badge-name">TikTok</div>
-                  <div className="partner-badge-title">Marketing Partner</div>
+                  <div className="partner-badge-name">{a.tiktokTitle}</div>
+                  <div className="partner-badge-title">{a.tiktokBadge}</div>
                 </div>
               </div>
             </div>
@@ -84,7 +93,7 @@ export default function About() {
               />
               <div className="about-photo-overlay" />
               <div className="about-visual-text">
-                <div className="section-label" style={{ marginBottom: '0.5rem' }}>Bagusaz Limited</div>
+                <div className="section-label" style={{ marginBottom: '0.5rem' }}>{a.bagusazLabel}</div>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-mid)', lineHeight: 1.7 }}>
                   74–78 Stanley Street, Central<br />
                   Hong Kong SAR
@@ -93,7 +102,11 @@ export default function About() {
             </div>
             <div className="about-badge">
               <div className="about-badge-num">18</div>
-              <div className="about-badge-txt">Industry<br />Awards</div>
+              <div className="about-badge-txt">
+                {a.awardsLabel.split('\n').map((line, i) => (
+                  <span key={i}>{line}{i === 0 && <br />}</span>
+                ))}
+              </div>
             </div>
           </div>
         </RevealOnScroll>
@@ -102,17 +115,10 @@ export default function About() {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem 7rem' }}>
         <RevealOnScroll>
           <p className="about-body">
-            Mirahha was founded on a single conviction: that <strong>Hong Kong deserves advertising
-            that matches its ambition</strong>. Too often, international agencies parachute generic
-            playbooks into one of the world&apos;s most sophisticated consumer markets and wonder why
-            the numbers disappoint.
+            Mirahha was founded on a single conviction: that <strong>{a.body1Strong}</strong>{a.body1Rest}
           </p>
           <p className="about-body">
-            We are a <strong>Hong Kong-native agency</strong>. We understand the bilingual media
-            landscape, the compressed attention windows of Central commuters, the taste-making
-            power of Causeway Bay, and the emerging pull of the Greater Bay Area. Every campaign
-            we build is architected for this specific geography — then exported globally when the
-            brief demands it.
+            We are a <strong>{a.body2Strong}</strong>{a.body2Rest}
           </p>
         </RevealOnScroll>
       </div>

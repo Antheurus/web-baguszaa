@@ -1,5 +1,12 @@
+// components/Footer.tsx
+'use client'
+
+import { useLanguage } from '@/lib/LanguageContext'
+
 export default function Footer() {
   const year = new Date().getFullYear()
+  const { t } = useLanguage()
+  const f = t.footer
 
   return (
     <footer>
@@ -30,15 +37,15 @@ export default function Footer() {
         </a>
 
         <div className="footer-copy">
-          &copy; {year} Bagusaz Limited. All rights reserved.<br />
+          &copy; {year} Bagusaz Limited. {f.rights}<br />
           Flat 5, 4/F Won Hing Building, 74–78 Stanley Street, Central, Hong Kong SAR
         </div>
 
         <ul className="footer-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services">{f.services}</a></li>
+          <li><a href="#work">{f.work}</a></li>
+          <li><a href="#about">{f.about}</a></li>
+          <li><a href="#contact">{f.contact}</a></li>
         </ul>
       </div>
     </footer>
