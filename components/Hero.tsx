@@ -20,7 +20,23 @@ export default function Hero() {
       <div className="hero-tag">Est. 2012 — Bagusaz Limited</div>
 
       <h1 className="hero-wordmark">
-        MIR<span>A</span>HHA
+        <svg className="hero-wordmark-icon" viewBox="20 15 155 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="hero-icon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#ff1f6e" />
+              <stop offset="100%" stopColor="#00d4ff" />
+            </linearGradient>
+          </defs>
+          <rect x="30" y="110" width="16" height="40" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="55" y="80" width="16" height="70" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="80" y="40" width="16" height="110" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="105" y="20" width="16" height="150" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="130" y="50" width="16" height="40" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="155" y="65" width="16" height="25" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="130" y="120" width="16" height="40" rx="4" fill="url(#hero-icon-grad)" />
+          <rect x="155" y="120" width="16" height="15" rx="4" fill="url(#hero-icon-grad)" />
+        </svg>
+        mirahha<span>.</span>
       </h1>
 
       <div className="hero-bottom">

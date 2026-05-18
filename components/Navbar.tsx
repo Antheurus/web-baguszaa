@@ -33,7 +33,7 @@ export default function Navbar() {
               <rect x="155" y="120" width="16" height="15" rx="4" fill="url(#nav-grad)" />
               <circle cx="138" cy="70" r="5" fill="none" />
             </g>
-            <text x="100" y="66" fontFamily="'Syne', sans-serif" fontSize="62" fontWeight="800" letterSpacing="-1">
+            <text x="100" y="66" fontFamily="'Plus Jakarta Sans', sans-serif" fontSize="62" fontWeight="800" letterSpacing="-1">
               <tspan fill="#ede9de">mirahha</tspan><tspan fill="#ff1f6e">.</tspan>
             </text>
           </svg>
