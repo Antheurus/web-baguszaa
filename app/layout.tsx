@@ -49,6 +49,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${bricolage.variable} ${jakarta.variable} ${dmMono.variable}`}>
+      <head>
+        <link rel="preload" as="image" href="/hk-tower.jpg" fetchPriority="high" />
+      </head>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

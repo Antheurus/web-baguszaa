@@ -22,7 +22,7 @@ export default function Marquee() {
         {doubled.map((item, i) => (
           <div key={i} className="marquee-item">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={item.src} alt={item.alt} className="marquee-logo" />
+            <img src={item.src} alt={item.alt} className="marquee-logo" height="32" width="120" />
             <span className="marquee-dot" />
           </div>
         ))}

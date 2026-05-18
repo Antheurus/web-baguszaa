@@ -505,7 +505,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-mid);
 }
 
 /* ─── Portfolio ──────────────────────────────────────────────────────────── */
@@ -1068,7 +1068,7 @@ img { display: block; max-width: 100%; }
   font-family: var(--font-mono);
   font-size: 0.62rem;
   letter-spacing: 0.12em;
-  color: var(--text-dim);
+  color: var(--text-mid);
   text-align: center;
   line-height: 1.6;
 }
@@ -1085,7 +1085,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.62rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-mid);
   transition: color 0.2s;
 }
 
