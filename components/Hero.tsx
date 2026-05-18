@@ -17,7 +17,7 @@ export default function Hero() {
         preload="none"
         poster="/hk-tower.jpg"
       >
-        <source src="/hero-video-web.mp4" type="video/mp4" />
+        <source src="/hero-video.mp4" type="video/mp4" />
       </video>
       <div className="hero-bg" />
 
