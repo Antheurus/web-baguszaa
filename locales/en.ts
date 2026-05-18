@@ -51,6 +51,8 @@ export type Translations = {
     metaBadge: string
     tiktokTitle: string
     tiktokBadge: string
+    googleTitle: string
+    googleBadge: string
     awardsLabel: string
     body1Strong: string
     body1Rest: string
@@ -193,6 +195,8 @@ const en: Translations = {
     metaBadge: 'Business Partner',
     tiktokTitle: 'TikTok',
     tiktokBadge: 'Marketing Partner',
+    googleTitle: 'Google',
+    googleBadge: 'Ads Partner',
     awardsLabel: 'Industry\nAwards',
     body1Strong: 'Hong Kong deserves advertising that matches its ambition',
     body1Rest:

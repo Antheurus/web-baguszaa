@@ -100,6 +100,8 @@ const zh: Translations = {
     metaBadge: '商业合作伙伴',
     tiktokTitle: 'TikTok',
     tiktokBadge: '营销合作伙伴',
+    googleTitle: 'Google',
+    googleBadge: 'Ads合作伙伴',
     awardsLabel: '行业\n奖项',
     body1Strong: '香港值得拥有与其雄心相匹配的广告',
     body1Rest:
