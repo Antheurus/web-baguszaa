@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Miranha — Hong Kong Advertising Agency',
   description: 'Bagusaz Limited. Performance advertising & brand amplification from the heart of Hong Kong.',
-  metadataBase: new URL('https://miranha.com'),
+  metadataBase: new URL('https://mirahha.com'),
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
