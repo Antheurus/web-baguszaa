@@ -1015,11 +1015,13 @@ img { display: block; max-width: 100%; }
 }
 
 .footer-logo {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  color: var(--text);
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.2s;
 }
+
+.footer-logo:hover { opacity: 0.75; }
 
 .footer-copy {
   font-family: var(--font-mono);
