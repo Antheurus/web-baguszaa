@@ -21,7 +21,7 @@
 /* ─── Reset ──────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; max-width: 100%; }
 
 body {
   background: var(--bg);
@@ -470,10 +470,13 @@ img { display: block; max-width: 100%; }
   background: var(--bg-2);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 .stats-grid {
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding: 5rem 3rem;
   display: grid;
@@ -648,6 +651,9 @@ img { display: block; max-width: 100%; }
 /* ─── Marquee ────────────────────────────────────────────────────────────── */
 .marquee-wrapper {
   overflow: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
   border-top: 1px solid #b8b6b0;
   border-bottom: 1px solid #b8b6b0;
   background: #d4d2cc;
@@ -1075,6 +1081,7 @@ img { display: block; max-width: 100%; }
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 2rem;
   list-style: none;
@@ -1157,10 +1164,18 @@ img { display: block; max-width: 100%; }
   .hero-actions .btn-primary,
   .hero-actions .btn-outline { justify-content: center; width: 100%; }
   .hero-scroll { display: none; }
+  .portfolio-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .portfolio-card:nth-child(1),
-  .portfolio-card:nth-child(5) { min-height: 240px; }
-  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .portfolio-card:nth-child(4),
+  .portfolio-card:nth-child(5) { grid-column: span 1; min-height: 240px; }
+  .stats-grid { padding: 3rem 1.25rem; }
+  .stat-item { padding: 1.5rem 1rem; }
+  .stat-value { font-size: clamp(2rem, 8vw, 2.8rem); }
+  .about-visual { overflow: hidden; }
+  .about-badge { top: 0.5rem; right: 0.5rem; width: 6rem; height: 6rem; }
+  .footer { padding: 2rem 1.25rem; }
+  .footer-links { justify-content: center; gap: 1rem 1.5rem; }
   .nav-links { display: none; }
   .form-row { grid-template-columns: 1fr; }
 }
