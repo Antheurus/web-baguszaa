@@ -14,4 +14,5 @@ yarn-error.log*
 *.pem
 .vercel
 .playwright-mcp/
+.playwright-cli/
 .gitnexus
